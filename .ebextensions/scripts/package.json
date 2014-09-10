@@ -1,0 +1,27 @@
+{
+  "name": "deployinator-scripts",
+  "version": "1.0.0",
+  "description": "Scripts to assist with setting up new instances of deployinator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/elasticbeanstalk-deployinator.git"
+  },
+  "keywords": [
+    "elasticbeanstalk",
+    "aws",
+    "sinopia"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/elasticbeanstalk-deployinator/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/elasticbeanstalk-deployinator",
+  "dependencies": {
+    "dot": "^1.0.2"
+  }
+}
