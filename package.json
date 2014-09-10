@@ -1,0 +1,30 @@
+{
+  "name": "deployinator",
+  "version": "1.0.0",
+  "description": "Private NPM Deployment helper using sinopia",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/elasticbeanstalk-deployinator.git"
+  },
+  "keywords": [
+    "deployment",
+    "elasticbeanstalk",
+    "sinopia",
+    "private-npm"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/elasticbeanstalk-deployinator/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/elasticbeanstalk-deployinator",
+  "dependencies": {
+    "dot": "^1.0.2",
+    "sinopia": "^0.9.3"
+  }
+}

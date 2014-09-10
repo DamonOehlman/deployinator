@@ -5,8 +5,5 @@
 pushd `dirname $0` > /dev/null
 SCRIPTPATH=`pwd -P`
 
-# install node dependencies
-$NODE_HOME/bin/npm install
-
 # pop path
 popd > /dev/null
