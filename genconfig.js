@@ -9,7 +9,7 @@ var configFile = path.resolve(__dirname, 'config.yaml');
 
 // initialise template data
 var data = {
-  namespace: process.env.PKG_NAMESPACE || 'local',
+  namespaces: (process.env.PKG_NAMESPACE || '').split(/\s+/),
   repository: process.env.PKG_UPSTREAM || 'https://registry.npmjs.org/'
 };
 

@@ -34,11 +34,13 @@ uplinks:
 packages:
   # uncomment this for packages with "local-" prefix to be available
   # for admin only, it's a recommended way of handling private packages
-  '{{= it.namespace }}-*':
-    allow_access: admin
-    allow_publish: admin
+  {{~it.namespaces :value:index}}
+  '{{= value }}-*':
+    allow_access: @authenticated
+    allow_publish: @authenticated
     # you can override storage directory for a group of packages this way:
     storage: 'local_storage'
+  {{~}}
 
   '*':
     # allow all users to read packages ('all' is a keyword)
