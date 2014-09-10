@@ -36,8 +36,8 @@ packages:
   # for admin only, it's a recommended way of handling private packages
   {{~it.namespaces :value:index}}
   '{{= value }}-*':
-    allow_access: @authenticated
-    allow_publish: @authenticated
+    allow_access: '@authenticated'
+    allow_publish: '@authenticated'
     # you can override storage directory for a group of packages this way:
     storage: 'local_storage'
   {{~}}
@@ -45,7 +45,7 @@ packages:
   '*':
     # allow all users to read packages ('all' is a keyword)
     # this includes non-authenticated users
-    allow_access: all
+    allow_access: '@all'
 
     # allow 'admin' to publish packages
     allow_publish: admin
