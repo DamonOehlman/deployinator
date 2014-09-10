@@ -11,7 +11,7 @@ users_file: ./htpasswd
 # a list of other known repositories we can talk to
 uplinks:
   npmjs:
-    url: {{= it.repository || 'https://registry.npmjs.org/' }}
+    url: {{= it.repository }}
 
     # amount of time to wait for repository to respond
     # before giving up and use the local cached copy
@@ -34,7 +34,7 @@ uplinks:
 packages:
   # uncomment this for packages with "local-" prefix to be available
   # for admin only, it's a recommended way of handling private packages
-  '{{= it.namespace || 'local' }}-*':
+  '{{= it.namespace }}-*':
     allow_access: admin
     allow_publish: admin
     # you can override storage directory for a group of packages this way:
