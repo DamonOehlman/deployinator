@@ -5,20 +5,16 @@ var defaults = require('cog/defaults');
 var template = dot.template(fs.readFileSync(__dirname + '/templates/config.yaml', 'utf8'), defaults({
   strip: false
 }, dot.templateSettings));
+
 var configFile = path.resolve(__dirname, 'config.yaml');
+var namespaces = process.env.PKG_NAMESPACES;
 
 // initialise template data
 var data = {
-  namespaces: (process.env.PKG_NAMESPACE || '').split(/\s+/),
+  namespaces: (namespaces && namespaces.split(/\s+/)) || [],
   repository: process.env.PKG_UPSTREAM || 'https://registry.npmjs.org/'
 };
 
 module.exports = function(callback) {
-  fs.exists(configFile, function(exists) {
-    if (exists) {
-      return callback();
-    }
-
-    fs.writeFile(configFile, template(data), 'utf8', callback);
-  });
+  fs.writeFile(configFile, template(data), 'utf8', callback);
 };
