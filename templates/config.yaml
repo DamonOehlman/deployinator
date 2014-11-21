@@ -1,5 +1,6 @@
 # path to a directory with all packages
-storage: /var/packages
+storage: /var/packages/upstream
+local_storage: /var/packages/local
 
 # a list of users
 users_file: ./htpasswd
