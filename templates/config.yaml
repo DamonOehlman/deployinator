@@ -1,6 +1,5 @@
 # path to a directory with all packages
 storage: /var/packages/upstream
-local_storage: /var/packages/local
 
 # a list of users
 users_file: ./htpasswd
@@ -40,7 +39,7 @@ packages:
     allow_access: all
     allow_publish: all
     # you can override storage directory for a group of packages this way:
-    storage: 'local_storage'
+    storage: '/var/packages/local'
   {{~}}
 
   '*':
